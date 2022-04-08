@@ -123,15 +123,13 @@
 	<footer>
 		<div class="container">
 			<span style="float:left">
-				关注教主：<a href="https://space.bilibili.com/49576477" target="_blank"><img src="./img/bilibili.png" alt="bilibili"
-						style="height: 1.5em;padding-bottom: 0.2em"> @键盘车神教</a>
-				<a href="https://www.weibo.com/u/5934299797" target="_blank"><img src="./img/weibo.png" alt="weibo"
-						style="height: 1.5em;padding-bottom: 0.2em"> @键盘车神教教主</a>
+				关注up：<a href="https://space.bilibili.com/2070472" target="_blank"><img src="./img/bilibili.png" alt="bilibili"
+						style="height: 1.5em;padding-bottom: 0.2em"> @我就是曹某</a>
 			</span>
 
 
 			<span style="float: right">
-				查看源代码：<a href="https://github.com/KBRACER/kbracer.github.io" target="_blank"><img src="./img/github.png"
+				查看源代码：<a href="https://github.com/CIDT/cidt" target="_blank"><img src="./img/github.png"
 						alt="github" style="height: 1.5em;padding-bottom: 0.2em"> GitHub</a>&nbsp;&nbsp;&nbsp;
 			</span>
 		</div>
@@ -141,24 +139,8 @@
 <script type="text/template" id="tb">
 
 	{{each data as v i}}
-<tr 
-  class="
-  {{if v.speed < 60}}
-  speed0
-  {{else if v.speed < 62}}
-  speed1
-  {{else if v.speed < 64}}
-  speed2
-  {{else if v.speed < 66}}
-  speed3
-  {{else if v.speed < 68}}
-  speed4
-  {{else if v.speed > 68}}
-  speed5
-  {{/if}}
-  "
-  >
-    <td>{{i + 1}}</td>
+<tr>
+    <td>{{v.序号}}</td>
     <td>{{v.作者}}</td>
     <td>{{v.CIDT成员}}</td>
     <td>{{v.整活类型}}</td>
