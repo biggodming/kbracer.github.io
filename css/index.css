@@ -1,10 +1,10 @@
 body {
-	background-image: linear-gradient(90deg, #485563, #29323c);
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-
-	overflow-x: hidden;
+	z-index: -2;
+	margin: 0;
+	padding: 0;
+	color: #eee;
+	overflow-y: scroll;
+	background-color: rgb(0, 0, 0);
 }
 
 tbody {
@@ -77,38 +77,99 @@ tr.speed5:hover {
 	color: #fff;
 }
 
-.table-responsive {
-	background-color: rgba(229, 229, 229, 0.3);
-	border-radius: 4px;
-	border: solid;
-	border-width: 0;
-	margin: 2em;
-}
-
 .black {
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
-.table {
-	margin-bottom: 0;
-
-	min-width: 1500px;
-}
-
 a {
 	color: #bbffff !important;
+	text-decoration: none;
 }
 
 a:hover {
 	color: aqua;
+	text-decoration: none;
 }
 
 a:checked {
 	color: azure;
+	text-decoration: none;
+}
+
+#background {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: fixed;
+	filter: blur(2px);
+	/*animation-name: bgFadeIn;
+	animation-duration: 5s;*/
+	opacity: 0.3;
+}
+
+/*@-moz-keyframes bgFadeIn {
+	from {
+		opacity: 0.8;
+		filter: blur(0);
+	}
+
+	to {
+		opacity: 0.2;
+		filter: blur(4px);
+	}
+}
+
+@-webkit-keyframes bgFadeIn {
+	from {
+		opacity: 0.8;
+		filter: blur(0);
+	}
+
+	to {
+		opacity: 0.2;
+		filter: blur(4px);
+	}
+}
+
+@-o-keyframes bgFadeIn {
+	from {
+		opacity: 0.8;
+		filter: blur(0);
+	}
+
+	to {
+		opacity: 0.2;
+		filter: blur(4px);
+	}
+}
+
+@keyframes bgFadeIn {
+	from {
+		opacity: 0.8;
+		filter: blur(0);
+	}
+
+	to {
+		opacity: 0.2;
+		filter: blur(4px);
+	}
+}*/
+
+#filler {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
 }
 
 .index_banner {
-	/* position: relative; */
+	position: relative; 
 	padding: 2em 1em;
 	margin: 1em 2em 0em;
 	border-radius: 20px;
@@ -116,17 +177,25 @@ a:checked {
 	background-image: linear-gradient(200deg, #2980b9, #2c3e50);
 	text-align: left;
 	vertical-align: middle;
-}
-
-#canvas_bg {
-	position: absolute;
-	/* width: 100%;
-    height: 100%; */
-	z-index: -10;
+	width: 100%;
 }
 
 .title {
 	color: #fefeff
+}
+
+.atable {
+	margin-bottom: 0;
+	width: 100%
+}
+
+.table-responsive {
+	width: 100%;
+	background-color: rgba(229, 229, 229, 0.3);
+	border-radius: 4px;
+	border: solid;
+	border-width: 0;
+	margin: 2em;
 }
 
 footer {
@@ -136,8 +205,7 @@ footer {
 	width: 100%;
 	padding: 2em;
 	margin-bottom: 0px;
-
-	line-height: 40px;
+	line-height: 5vh;
 }
 
 /* layer */
