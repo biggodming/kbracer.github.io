@@ -7,11 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>CIDT作品指南</title>
 	<meta name="description" content="戴森球计划整活合集">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/button.css" rel="stylesheet">
 	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap-table.min.css">
 	<link rel="stylesheet" href="./css/index.css?v=202012141445">
-
-	<link rel="stylesheet" href="./css/button.css?v=202012141445">
 	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
 	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -19,121 +20,129 @@
 	<script src="./lib/bootstrap/js/bootstrap-table.min.js"></script>
 	<script src="./lib/bootstrap/js/bootstrap-table-zh-CN.min.js"></script>
 	<script src="./lib/template.js"></script>
-	<script src="./lib/canvas-bg/TweenLite.min.js"></script>
+	<!--script src="./lib/canvas-bg/TweenLite.min.js"></script>
 	<script src="./lib/canvas-bg/EasePack.min.js"></script>
-	<script src="./lib/canvas-bg/rAF.js"></script>
+	<script src="./lib/canvas-bg/rAF.js"></script-->
 	<script src="./lib/layer/layer.js"></script>
 	<script src="./js/index.js?v=202012141445"></script>
 </head>
 
 <body>
-	<div id="canvas_bg">
-		<canvas id="canvas1"></canvas>
-	</div>
+	<!--canvas id="canvas1"></canvas-->
+	<div id="background"></div>
+	<div id="filler">
 
-	<div class="index_banner">
-
-		<table style="width: 100%">
-			<tr>
-				<td style="width: 5%"><img src="./img/logo.png" style="padding-right: 1em" /></td>
-				<td class="hid">
-					<h1 class="title">CIDT作品指南</h1>
-					<h5 class="title">戴森球计划整活合集</h5>
-				</td>
-				<td class="options">
-					<div class="col-sm-4">
-						<div class="input-group">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">搜索车型</button>
-							</span>
-							<input type="text" class="form-control search" placeholder="关键字">
+		<div class="index_banner">
+			<table class="atable">
+				<tr>
+					<td style="width: 5%"><img src="./img/logo.png" style="padding-right: 1em" /></td>
+					<td class="hid">
+						<h1 class="title">CIDT作品指南</h1>
+						<h5 class="title">戴森球计划整活合集</h5>
+					</td>
+					<td class="options">
+						<div class="col-sm-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">搜索作品</button>
+								</span>
+								<input type="text" class="form-control search" placeholder="关键字">
+							</div>
 						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="input-group">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">级别</button>
-							</span>
-							<select class="form-control lv">
-								<option value="all">所有</option>
-								<option value="A00">A00</option>
-								<option value="A0">A0</option>
-								<option value="A">A</option>
-								<option value="B">B</option>
-								<option value="C">C</option>
-								<option value="S">S</option>
-							</select>
+						<div class="col-sm-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">类型</button>
+								</span>
+								<select class="form-control lv">
+									<option value="all">所有</option>
+									<option value="A00">球雕</option>
+									<option value="A0">蓝图</option>
+									<option value="A">mod</option>
+									<option value="B">机甲</option>
+									<option value="C">音乐</option>
+									<option value="S">其他</option>
+								</select>
+							</div>
 						</div>
-					</div>
-					<!-- </div> -->
-					<div class="col-sm-4">
-						<div class="input-group">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">原厂/改装</button>
-							</span>
-							<select class="form-control mods">
-								<option value="all">所有</option>
-								<option value="0">原厂</option>
-								<option value="1">改装</option>
-							</select>
+						<!-- </div> -->
+						<div class="col-sm-4">
+							<div class="input-group">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">教程/整活</button>
+								</span>
+								<select class="form-control mods">
+									<option value="all">所有</option>
+									<option value="0">教程</option>
+									<option value="1">整活</option>
+								</select>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
-
-
-	<div class="table-responsive">
-		<table id="tb_results" class="table table-hover">
-			<thead>
-				<th class="序号">
-					序号
-					<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-				</th>
-				<th class="作者">作者</th>
-				<th class="CIDT成员">
-					CIDT成员
-					<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-				</th>
-				<th class="整活类型">整活类型</th>
-				<th class="投稿时间">投稿时间</th>
-				<th class="原贴名称">
-					原贴名称
-					<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-				</th>
-				<th class="原帖地址">
-					原帖地址
-					<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-				</th>
-			</thead>
-
-			<tbody>
-
-			</tbody>
-		</table>
-		
-	</div>
-			<div class="button">
-				<span>圈速榜说明书</span>
-			</div>
-
-
-	<div class="placeholding" style="flex: 1"></div>
-	<footer>
-		<div class="container">
-			<span style="float:left">
-				关注up：<a href="https://space.bilibili.com/2070472" target="_blank"><img src="./img/bilibili.png" alt="bilibili"
-						style="height: 1.5em;padding-bottom: 0.2em"> @我就是曹某</a>
-			</span>
-
-
-			<span style="float: right">
-				查看源代码：<a href="https://github.com/CIDT/cidt" target="_blank"><img src="./img/github.png"
-						alt="github" style="height: 1.5em;padding-bottom: 0.2em"> GitHub</a>&nbsp;&nbsp;&nbsp;
-			</span>
+					</td>
+				</tr>
+			</table>
 		</div>
-	</footer>
+
+		<div class="table-responsive">
+			<table id="tb_results" class="table table-hover">
+				<thead>
+					<th class="序号">
+						序号
+						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
+					</th>
+					<th class="作者">作者</th>
+					<th class="CIDT成员">
+						CIDT成员
+						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
+					</th>
+					<th class="整活类型">整活类型</th>
+					<th class="投稿时间">投稿时间</th>
+					<th class="原贴名称">
+						原贴名称
+						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
+					</th>
+					<th class="原帖地址">
+						原帖地址
+						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
+					</th>
+				</thead>
+
+				<tbody>
+
+				</tbody>
+			</table>
+
+		</div>
+		<div class="button">
+			<span>作品详情列表</span>
+		</div>
+
+
+		<div class="placeholding" style="flex: 1"></div>
+		<footer>
+			<div class="container">
+				<span style="float:left">
+					相关up：<a href="https://space.bilibili.com/2070472" target="_blank"><i class="ri-bilibili-fill ri-xl"
+							style="color:#FF8EB3"></i> @我就是曹某</a>
+					<a href="https://space.bilibili.com/933614" target="_blank"><i class="ri-bilibili-fill ri-xl"
+							style="color:#FF8EB3"></i> @McKen</a>
+					<a href="https://space.bilibili.com/441955257" target="_blank"><i class="ri-bilibili-fill ri-xl"
+							style="color:#FF8EB3"></i> @我的小马叫丁真</a>
+					<a href="https://space.bilibili.com/12120424" target="_blank"><i class="ri-bilibili-fill ri-xl"
+							style="color:#FF8EB3"></i> @看客之眼</a>
+					<a href="https://space.bilibili.com/9564795" target="_blank"><i class="ri-bilibili-fill ri-xl"
+							style="color:#FF8EB3"></i> @阿七寇大先生</a>
+					<a href="https://space.bilibili.com/379039" target="_blank"><i class="ri-bilibili-fill ri-xl"
+							style="color:#FF8EB3"></i> @Alpha初见</a>
+				</span>
+
+
+				<span style="float: right">
+					查看源代码：<a href="https://github.com/CIDT/cidt" target="_blank"><i class="ri-github-fill ri-xl"
+							style="color:white"></i> GitHub</a>&nbsp;&nbsp;&nbsp;
+				</span>
+			</div>
+		</footer>
 </body>
 
 <script type="text/template" id="tb">
@@ -157,48 +166,35 @@
 
 
 <div class="tips" style="display: none;">
-	<div class="tips-content tips-content-mods" >
-		<h3>1.改装程度</h3>
-		<p>改装程度分【0】【1】【2】【3】【-1】</p>
-		<p>【0】纯原厂，包括轮胎，心情件不算。</p>
-		<p>【1】轻度改装，轮胎，轮毂，避震，刹车，进排气，ECU等，不能改装引擎和波箱内部结构，不能使用R胎。这是绝大部分改装车最常见的入门改装。</p>
-		<p>【2】中度改装，引擎改装，如腹内锻造，大涡轮，扩缸或移植非性能引擎。传动系统改装，如LSD+大尾牙。可以使用热熔胎。</p>
-		<p>【3】赛化改装。无限制，专业赛车，移植性能机，序列式，改变悬挂结构等。</p>
-		<p>【-1】一般指使用了比原厂规格更低的轮胎，如A45，或者副驾带人（额外负重）。</p>
+	<div class="tips-content tips-content-mods">
+		<h3></h3>
+		<p></p>
 	</div>
 
-	<div class="tips-content tips-content-temperature" >
-		<h3>2.气温</h3>
-		<p>最出圈速的气温是轮胎能够起温，且进气温度低。我会尽量选在10-25℃进行测试。</p>
-		<p>气温过高：空气密度低。马力小于200ps的自然吸气引擎，或者高温衰减严重的涡轮买菜车，圈速会变慢。30℃以上区间会非常明显，相比10℃，这些车圈速在锐思会有0.X秒的差距。甚至有些极端车型有超过1s的差距，请大家自行脑补修正。
-		</p>
-		<p>气温过低：如果使用热熔胎在低温环境中测试，会因为轮胎无法进入工作温度而大幅影响圈速。而普通运动轮胎普遍可以在0℃的情况下正常工作。</p>
-		<p>相对而言，散热较好且马力较大的宝马S55车型，保时捷911车型，受到高温影响较小。而搭载四驱的高性能车，如奥迪RS系列，对轮胎起温的要求较低，受到低温影响较小，0℃以下依然能发挥威力。</p>
+	<div class="tips-content tips-content-temperature">
+		<h3></h3>
+		<p></p>
 	</div>
 
-	<div class="tips-content tips-content-tyre" >
-		<h3>3.轮胎磨损</h3>
-		<p>我的测试车辆大多数来自白嫖。有的车借来时轮胎已经有严重磨损或者年份过久，会影响圈速，我都会在节目中说明。（如S3轮胎已经石化）</p>
+	<div class="tips-content tips-content-tyre">
+		<h3></h3>
+		<p></p>
 	</div>
 
-	<div class="tips-content tips-content-limit" >
-		<h3>4.尾速</h3>
-		<p>赛道尾速是指一条赛道中能达到的最高速度，一般在赛道最长的直线中诞生。尾速和01加速一样是动力水准的重要指标，但又有所不同。</p>
-		<p>
-			01加速不仅是对动力的检验，还需要考虑起步时的驱动效率，以及弹射程序的聪明与否。影响尾速的最大因素的仍然是动力水准，如我100ps的原厂菱帅只有112的尾速。但是450ps的911s（992）则是163的尾速。第二影响因素是弯道性能，也就是操控，因为直线上一个弯道出的快不快，直接影响直线部分的起始速度。
-		</p>
+	<div class="tips-content tips-content-limit">
+		<h3></h3>
+		<p></p>
 	</div>
 
-	<div class="tips-content tips-content-ranking" >
-		<h3>5.为什么我要动态起步</h3>
-		<p>Hot lap，一般被称为飞行圈或者飞驰圈（我喜欢叫飞行圈，因为比较中二）。指得是非静止起步的全力最快圈，也是大家约定俗称进行圈速测试的方式。</p>
-		<p>有人可能会有疑问，因为每台车起始速度不同，但这由车辆性能差异导致，本就应该对圈速产生影响。</p>
-		<p>而静态起步圈速测试和驱动形式关系较大，意义不大，一般并采用。</p>
+	<div class="tips-content tips-content-ranking">
+		<h3></h3>
+		<p></p>
 	</div>
 
-	<div class="tips-content tips-content-speed" >
-		<p>圈速是一台车动力，操控性，制动和主动安全性的全面体现。</p>
+	<div class="tips-content tips-content-speed">
+		<p></p>
 	</div>
+</div>
 </div>
 
 </html>
