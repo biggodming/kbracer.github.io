@@ -98,14 +98,19 @@ tr.speed5:hover {
 }
 
 .index_banner {
-	position: relative; 
-	padding: 2em 1em;
-	margin: 1em 2em 0em;
-	border-radius: 20px;
-	box-shadow: 1px 1px 10px #333;
-	background-image: linear-gradient(200deg, #2980b9, #2c3e50);
-	text-align: left;
-	vertical-align: middle;
+    position: relative; 
+	width: 100%;
+    padding: 2em 1em;
+    margin: 1rem auto;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #333;
+    background-image: linear-gradient(200deg, #2980b9, #2c3e50);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.index_banner table{
+	width: 100%;
 }
 
 .title {
@@ -121,31 +126,10 @@ tr.speed5:hover {
 	width: 100%;
 	background-color: rgba(229, 229, 229, 0.3);
 	border-radius: 4px;
+	justify-content: space-between;
 	border: solid;
 	border-width: 0;
 	margin: 2em;
-}
-
-.footer {
-	display: flex;
-    position: absolute;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	padding-bottom: 10px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9;
-    box-sizing: border-box;
-}
-
-.footer div{
-	margin: auto;
-	margin-top: 0.2rem;
-	color: #5cb6f3;
-	font-size: medium;
-	line-height: 1;
 }
 
 /* layer */
@@ -158,6 +142,11 @@ tr.speed5:hover {
 
 .center {
 	text-align: center;
+}
+
+#tb_results th{
+	vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
 }
 
 #tb_results .icon {
