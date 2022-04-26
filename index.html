@@ -1,200 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>CIDT作品指南</title>
-	<meta name="description" content="戴森球计划整活合集">
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
-	<link href="css/button.css" rel="stylesheet">
-	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap-table.min.css">
-	<link rel="stylesheet" href="./css/index.css?v=202012141445">
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
-	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-	<script src="./lib/bootstrap/js/bootstrap-table.min.js"></script>
-	<script src="./lib/bootstrap/js/bootstrap-table-zh-CN.min.js"></script>
-	<script src="./lib/template.js"></script>
-	<!--script src="./lib/canvas-bg/TweenLite.min.js"></script>
-	<script src="./lib/canvas-bg/EasePack.min.js"></script>
-	<script src="./lib/canvas-bg/rAF.js"></script-->
-	<script src="./lib/layer/layer.js"></script>
-	<script src="./js/index.js?v=202012141445"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="author" content="CIDT">
+    <meta name="description" content="CIDT">
+    <meta name="keywords" content="CIDT,戴森球计划">
+    <title>CIDT</title>
+    <link rel="icon" href="img/cidt.ico">
+    <link rel="shortcut icon" href="img/cidt.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap"
+        media="all" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
-<body>
-	<!--canvas id="canvas1"></canvas-->
-	<div id="background"></div>
-	<div id="filler">
-
-		<div class="index_banner">
-			<table class="atable">
-				<tr>
-					<td style="width: 5%"><img src="./img/logo.png" style="padding-right: 1em" /></td>
-					<td class="hid">
-						<h1 class="title">CIDT作品指南</h1>
-						<h5 class="title">戴森球计划整活合集</h5>
-					</td>
-					<td class="options">
-						<div class="col-sm-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">搜索作品</button>
-								</span>
-								<input type="text" class="form-control search" placeholder="关键字">
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">类型</button>
-								</span>
-								<select class="form-control lv">
-									<option value="all">所有</option>
-									<option value="A00">球雕</option>
-									<option value="A0">蓝图</option>
-									<option value="A">mod</option>
-									<option value="B">机甲</option>
-									<option value="C">音乐</option>
-									<option value="S">其他</option>
-								</select>
-							</div>
-						</div>
-						<!-- </div> -->
-						<div class="col-sm-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">教程/整活</button>
-								</span>
-								<select class="form-control mods">
-									<option value="all">所有</option>
-									<option value="0">教程</option>
-									<option value="1">整活</option>
-								</select>
-							</div>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-
-		<div class="table-responsive">
-			<table id="tb_results" class="table table-hover">
-				<thead>
-					<th class="序号">
-						序号
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-					<th class="作者">作者</th>
-					<th class="CIDT成员">
-						CIDT成员
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-					<th class="整活类型">整活类型</th>
-					<th class="投稿时间">投稿时间</th>
-					<th class="原贴名称">
-						原贴名称
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-					<th class="原帖地址">
-						原帖地址
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-				</thead>
-
-				<tbody>
-
-				</tbody>
-			</table>
-
-		</div>
-		<div class="button">
-			<span>作品详情列表</span>
-		</div>
-
-
-		<div class="placeholding" style="flex: 1"></div>
-		<footer>
-			<div class="container">
-				<span style="float:left">
-					相关up：<a href="https://space.bilibili.com/2070472" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @我就是曹某</a>
-					<a href="https://space.bilibili.com/933614" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @McKen</a>
-					<a href="https://space.bilibili.com/441955257" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @我的小马叫丁真</a>
-					<a href="https://space.bilibili.com/12120424" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @看客之眼</a>
-					<a href="https://space.bilibili.com/9564795" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @阿七寇大先生</a>
-					<a href="https://space.bilibili.com/379039" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @Alpha初见</a>
-				</span>
-
-
-				<span style="float: right">
-					查看源代码：<a href="https://github.com/CIDT/cidt" target="_blank"><i class="ri-github-fill ri-xl"
-							style="color:white"></i> GitHub</a>&nbsp;&nbsp;&nbsp;
-				</span>
-			</div>
-		</footer>
+<body class="cover">
+    <!--主体盒子|mainbox-->
+    <div class="maindiv">
+        <!--背景|background-->
+        <div class="background"></div>
+        <!--元素|element-->
+        <div class="banner">
+            <div class="main-inner">
+                <!--定界框|border-area-->
+                <div class="show-container">
+                    <!--轮播|flow-->
+                    <div class="floatbox">
+                        <!--左箭头|left-arrow-->
+                        <div class="left-arrow arrow">
+                            <svg viewBox="0 0 1000 1000">
+                                <path
+                                    d="M567.62 715.85L359.36 512.12l208.23-203.94c11.05-10.82 11.23-28.55 0.41-39.6s-28.55-11.23-39.6-0.41L299.74 492.12c-0.07 0.07-0.13 0.14-0.2 0.21-0.07 0.07-0.15 0.14-0.22 0.21-0.1 0.1-0.19 0.2-0.28 0.3-0.17 0.18-0.34 0.36-0.5 0.54-0.15 0.17-0.3 0.34-0.44 0.51-0.17 0.19-0.33 0.39-0.49 0.59-0.14 0.17-0.27 0.34-0.4 0.51-0.16 0.2-0.31 0.41-0.46 0.61-0.13 0.17-0.25 0.35-0.37 0.52-0.14 0.21-0.29 0.41-0.42 0.62-0.12 0.18-0.23 0.36-0.35 0.54-0.13 0.21-0.26 0.42-0.38 0.63l-0.33 0.57c-0.12 0.21-0.23 0.42-0.34 0.63-0.1 0.2-0.21 0.4-0.31 0.6-0.1 0.21-0.2 0.41-0.3 0.62-0.1 0.21-0.19 0.42-0.28 0.63-0.09 0.21-0.18 0.41-0.26 0.62-0.09 0.22-0.17 0.43-0.25 0.65-0.08 0.2-0.15 0.41-0.22 0.61-0.08 0.22-0.15 0.45-0.23 0.68-0.07 0.2-0.13 0.41-0.19 0.61-0.07 0.23-0.13 0.46-0.19 0.69-0.06 0.21-0.11 0.41-0.16 0.62-0.06 0.23-0.11 0.46-0.16 0.7-0.05 0.21-0.09 0.41-0.13 0.62-0.05 0.23-0.09 0.47-0.13 0.7-0.04 0.21-0.07 0.42-0.1 0.63l-0.09 0.7c-0.03 0.21-0.05 0.43-0.07 0.64l-0.06 0.69c-0.02 0.22-0.03 0.44-0.04 0.66-0.01 0.23-0.02 0.45-0.02 0.68-0.01 0.22-0.01 0.45-0.01 0.67 0 0.22 0 0.45 0.01 0.67 0.01 0.23 0.01 0.45 0.02 0.68 0.01 0.22 0.02 0.44 0.04 0.66 0.02 0.23 0.03 0.46 0.06 0.69 0.02 0.21 0.04 0.43 0.07 0.64l0.09 0.7c0.03 0.21 0.06 0.42 0.1 0.63 0.04 0.23 0.08 0.47 0.13 0.7 0.04 0.21 0.08 0.42 0.13 0.62 0.05 0.23 0.1 0.46 0.16 0.69 0.05 0.21 0.11 0.42 0.16 0.62 0.06 0.23 0.12 0.45 0.19 0.68 0.06 0.21 0.13 0.42 0.19 0.62 0.07 0.22 0.14 0.44 0.22 0.66 0.07 0.21 0.15 0.42 0.23 0.63 0.08 0.21 0.16 0.42 0.25 0.63 0.09 0.21 0.18 0.43 0.27 0.64 0.09 0.2 0.18 0.41 0.27 0.61 0.1 0.22 0.2 0.43 0.31 0.65 0.1 0.19 0.19 0.39 0.29 0.58 0.11 0.22 0.23 0.44 0.36 0.65 0.1 0.18 0.21 0.37 0.31 0.55 0.13 0.22 0.26 0.44 0.4 0.65 0.11 0.17 0.22 0.35 0.33 0.52 0.14 0.22 0.29 0.44 0.45 0.65 0.12 0.16 0.23 0.33 0.35 0.49 0.16 0.22 0.32 0.43 0.49 0.64a28.488 28.488 0 0 0 0.9 1.1c0.14 0.16 0.27 0.32 0.41 0.47 0.18 0.2 0.36 0.39 0.54 0.58 0.09 0.09 0.17 0.19 0.26 0.28 0.07 0.07 0.13 0.13 0.2 0.19 0.08 0.08 0.15 0.15 0.22 0.23l228.71 223.74c5.45 5.33 12.51 7.98 19.58 7.98 7.27 0 14.53-2.81 20.02-8.42 10.79-11.03 10.6-28.76-0.46-39.58z"></path>
+                            </svg>
+                        </div>
+                        <div class="media-container-box" style="perspective: 5000px">
+                            <div class="media-main-view" id="media-layer-view">
+                              <div class="media-current">
+                                <div class="media-main-pic">
+                                  <div class="media-img"></div>
+                                </div>
+                      
+                                <div class="media-user-interactive" id="media-layer-front">
+                                  <div class="media-current-info">
+                                    <div class="media-info-wrapper">
+                                      <div class="media-info-serial"></div>
+                                      <div class="media-info-title"></div>
+                                      <div class="media-info-detail">
+                                        <div class="media-detail-desc"></div>
+                                      </div>
+                                    </div>
+                      
+                                    <div class="media-nav-wrapper"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="media-list-wrapper" id="media-list"></div>
+                            </div>
+                          </div>
+                        <!--<div class="shower">
+                            <a href="https://www.bilibili.com/video/BV16q4y1e7ej?spm_id_from=333.999.0.0" title="" target="_blank"><img src="img/banner/001.jpg" class="banner-img"><span
+                                    class=""></span></a>
+                        </div>
+                        <div class="shower">
+                            <a href="https://www.bilibili.com/video/BV1RL4y1G7Zz?spm_id_from=333.999.0.0" title="" target="_blank"><img src="img/banner/002.jpg" class="banner-img"><span
+                                    class=""></span></a>
+                        </div>
+                        <div class="shower">
+                            <a href="https://www.bilibili.com/video/BV15L4y1j7qt?spm_id_from=333.999.0.0" title="" target="_blank"><img src="img/banner/003.jpg" class="banner-img"><span
+                                    class=""></span></a>
+                        </div>
+                        <div class="shower">
+                            <a href="https://www.bilibili.com/video/BV1ZR4y157vn?spm_id_from=333.999.0.0" title="" target="_blank"><img src="img/banner/004.jpg" class="banner-img"><span
+                                    class=""></span></a>
+                        </div>
+                        <div class="shower">
+                            <a href="https://www.bilibili.com/video/BV1fF41137Pa?spm_id_from=333.999.0.0" title="" target="_blank"><img src="img/banner/005.jpg" class="banner-img"><span
+                                    class=""></span></a>
+                        </div>
+                        <script src="js/rolling.js"></script>-->
+                    </div>
+                    <div>
+                        <nav class="gate">
+                            <ul class="key">
+                                <li class="go-into">
+                                    <a data-pjax href="tablepage.html" title="作品列表">详作品一览</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    <span>
+                        &copy; 2021-<script>
+                            document.write((new Date).getFullYear());
+                        </script> CIDT |</span>
+                    <span id="living-time"></span>
+                    <script src="js/living-time.js"></script>
+                    <span>
+                        <a href="https://github.com/CIDT/cidt" target="_blank"><i class="ri-github-fill"
+                                style="color:white"></i> 源码</a>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        相关up：<a href="https://space.bilibili.com/2070472" target="_blank"><i class="ri-bilibili-fill"
+                                style="color:#FF8EB3"></i> 我就是曹某</a>
+                        <a href="https://space.bilibili.com/933614" target="_blank"><i class="ri-bilibili-fill"
+                                style="color:#FF8EB3"></i> McKen</a>
+                        <a href="https://space.bilibili.com/441955257" target="_blank"><i class="ri-bilibili-fill"
+                                style="color:#FF8EB3"></i> 我的小马叫丁真</a>
+                        <a href="https://space.bilibili.com/12120424" target="_blank"><i class="ri-bilibili-fill"
+                                style="color:#FF8EB3"></i> 看客之眼</a>
+                        <a href="https://space.bilibili.com/9564795" target="_blank"><i class="ri-bilibili-fill"
+                                style="color:#FF8EB3"></i> 阿七寇大先生</a>
+                        <a href="https://space.bilibili.com/379039" target="_blank"><i class="ri-bilibili-fill"
+                                style="color:#FF8EB3"></i> Alpha初见</a>
+                    </span></div>
+            </div>
+        </div>
+        <!--aplyer--
+        <!--主页|mainpage--
+        <div class="banner">
+            <div class="main-inner inverted">
+                <div class="show-container">
+                    <!--头像|avatar--
+                    <a>
+                        <img src="img/kanke.png" class="logo logo_style">
+                    </a>
+                    <!--主题|theme--
+                    <h1 class="bio">看客之眼</h1>
+                    <span class="myself">投身热爱，追求幸福，专注于造梦与圆梦，常居2.5次元</span>
+                    <!--中部展示|middle-box--
+                    <div class="minbox">
+                        <div class="banner-main">
+                            <div class="banner-show">
+                                <!--个人标签|personal-tag--
+                                <div class="mytag">
+                                    <div class="tag">
+                                        <p>科幻</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>音乐</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>码字</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>剪辑</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>前端</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>ACG</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>树洞</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>B站</p>
+                                    </div>
+                                    <div class="tag">
+                                        <p>云村</p>
+                                    </div>
+                                </div>
+                                <!--标题|main-words--
+                                <div class="charbox">
+                                    <div class="charight"><span class="span-a">私</span></div>
+                                    <div class="charleft"><span class="span-b">の</span></div>
+                                    <div class="charight"><span class="span-c">永</span></div>
+                                    <div class="charleft"><span class="span-d">恒</span></div>
+                                    <div class="charight"><span class="span-e">の</span></div>
+                                    <div class="charleft"><span class="span-f">梦</span></div>
+                                    <div class="charight"><span class="span-g">境</span></div>
+                                </div>
+                                <!--社交图标|social-link--
+                                <div class="social-link">
+                                    <div class="social-icon">
+                                        <a href="https://space.bilibili.com/12120424" target="_blank" title="哔哩哔哩"><i
+                                                class="ri-bilibili-fill fillsize" style="color:#FF8EB3"></i></a>
+                                    </div>
+                                    <div class="social-icon">
+                                        <a href="https://github.com/kankezhiyan" target="_blank" title="Github"><i
+                                                class="ri-github-fill fillsize" style="color:white"></i></a>
+                                    </div>
+                                    <div class="social-icon">
+                                        <a href="https://music.163.com/#/user/home?id=413745489" target="_blank" title="网易云音乐"><i
+                                                class="ri-netease-cloud-music-fill fillsize" style="color:#C10D0C"></i></a>
+                                    </div>
+									<div class="social-icon">
+                                        <a href="https://steamcommunity.com/profiles/76561198260399850/" target="_blank" title="Steam"><i
+                                                class="ri-steam-fill fillsize" style="color:white"></i></a>
+                                    </div>
+                                    <div class="social-icon">
+                                        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=8h9FwinECTwEs2j82qy82KLt3znZNPoe&jump_from=webapi"
+                                            target="_blank" title="QQ群:205258359"><i class="ri-qq-fill fillsize" style="color:#12B7F5"></i></a>
+                                    </div>
+                                    <div class="social-icon">
+                                        <a href="mailto:361876798whyr@sina.com" target="_blank" title="E-Mail"><i
+                                                class="ri-mail-fill fillsize" style="color:#8E71C1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--中二发言|your-words--
+                        <div class="sentences">
+                            <script src="js/words.js"></script>
+                            <span id="words">「 不睁开双眼，便没有明天。」</span>
+                            <span id="me">——看客の呓语——</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!--页底信息|footer--
+            <div class="footer">
+				<div class="footer-one">
+					<span>&copy; 2022-<script>document.write((new Date).getFullYear());</script> 看客之眼 | </span>
+					<span id="living-time"></span>
+					<script src="js/living-time.js"></script>
+				</div>
+				<div class="footer-two">
+					<span>support:<i class="ri-service-fill" style="color:#C10D0C"></i><a href="https://host.retiehe.com/" target="_blank" title="建站支持">热铁盒</a> | <i class="ri-github-fill" style="color:white;"></i><a href="" target="_blank" title="网站源码">源码</a> | 鸣谢：<i class="ri-heart-fill" style="color:#C10D0C;"></i><a href="https://iotcat.me/" target="_blank" title="提供代码思路">IoTcat</a> <i class="ri-heart-fill" style="color:#C10D0C;"></i><a href="https://www.yunyoujun.cn/" target="_blank" title="提供设计思路">云游君</a> <i class="ri-heart-fill" style="color:#C10D0C;"></i><a href="https://www.yangshangzhen.com/" target="_blank" title="提供建站托管">杨尚臻</a> <i class="ri-heart-fill" style="color:#C10D0C;"></i><a href="" onclick="return:fasle;" title="（某不愿透露自己的大佬）帮助改进代码">尚总</a></span>            
+				</div>
+			</div>	 
+        </div>
+    </div>
+	<div id="pjax-container"></div>
+	<script src="js/jquery.pjax.js">
+	$.pjax.defaults.timeout = 1200;
+	$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container')
+	</script>-->
 </body>
-
-<script type="text/template" id="tb">
-
-	{{each data as v i}}
-<tr>
-    <td>{{v.序号}}</td>
-    <td>{{v.作者}}</td>
-    <td>{{v.CIDT成员}}</td>
-    <td>{{v.整活类型}}</td>
-    <td>{{v.投稿时间}}</td>
-	<td>{{v.原贴名称}}</td>
-	<td>
-		<a href="{{v.原帖地址}}" target="_blank">{{v.原帖地址}}</a>
-	</td>
-  </tr>
-  {{/each}}
-
-</script>
-
-
-
-<div class="tips" style="display: none;">
-	<div class="tips-content tips-content-mods">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-temperature">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-tyre">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-limit">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-ranking">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-speed">
-		<p></p>
-	</div>
-</div>
-</div>
 
 </html>
