@@ -9,7 +9,7 @@ request.onload = function () {
   }
 
   for (let i = 0; i < carouselList.length; i++) {
-    carouselList[i].thumbnail = `img/banner/banner_${i + 1}.png`
+    carouselList[i].thumbnail = `img/banner/banner_${i + 1}.webp`
   }
   /**
    * 初始化轮播
