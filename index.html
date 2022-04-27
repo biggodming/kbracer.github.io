@@ -1,200 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>CIDT作品指南</title>
-	<meta name="description" content="戴森球计划整活合集">
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
-	<link href="css/button.css" rel="stylesheet">
-	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap-table.min.css">
-	<link rel="stylesheet" href="./css/index.css?v=202012141445">
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
-	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-	<script src="./lib/bootstrap/js/bootstrap-table.min.js"></script>
-	<script src="./lib/bootstrap/js/bootstrap-table-zh-CN.min.js"></script>
-	<script src="./lib/template.js"></script>
-	<!--script src="./lib/canvas-bg/TweenLite.min.js"></script>
-	<script src="./lib/canvas-bg/EasePack.min.js"></script>
-	<script src="./lib/canvas-bg/rAF.js"></script-->
-	<script src="./lib/layer/layer.js"></script>
-	<script src="./js/index.js?v=202012141445"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="author" content="CIDT">
+    <meta name="description" content="CIDT">
+    <meta name="keywords" content="CIDT,戴森球计划">
+    <title>CIDT</title>
+    <link rel="icon" href="img/cidt.ico">
+    <link rel="shortcut icon" href="img/cidt.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap"
+        media="all" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
-<body>
-	<!--canvas id="canvas1"></canvas-->
-	<div id="background"></div>
-	<div id="filler">
+<body class="cover">
+    <!--主体盒子|mainbox-->
+    <div class="maindiv">
+        <!--背景|background-->
+        <div class="background"></div>
+        <!--元素|element-->
+        <div class="banner">
+            <div class="main-inner">
+                <!--定界框|border-area-->
+                <div class="show-container">
+                    <!--轮播|flow-->
+                    <section id="floatbox">
+                        <!--左箭头|left-arrow-->
+                        <div id="left-arrow" class="arrow">
+                            <svg viewBox="0 0 1000 1000">
+                                <path
+                                    d="M100.1 499.1l-1 1 424.3 424.3 56.6-56.6-369.1-369 368.7-368.7L523 73.5 98.8 497.8z">
+                                </path>
+                            </svg>
+                        </div>
 
-		<div class="index_banner">
-			<table class="atable">
-				<tr>
-					<td style="width: 5%"><img src="./img/logo.png" style="padding-right: 1em" /></td>
-					<td class="hid">
-						<h1 class="title">CIDT作品指南</h1>
-						<h5 class="title">戴森球计划整活合集</h5>
-					</td>
-					<td class="options">
-						<div class="col-sm-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">搜索作品</button>
-								</span>
-								<input type="text" class="form-control search" placeholder="关键字">
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">类型</button>
-								</span>
-								<select class="form-control lv">
-									<option value="all">所有</option>
-									<option value="A00">球雕</option>
-									<option value="A0">蓝图</option>
-									<option value="A">mod</option>
-									<option value="B">机甲</option>
-									<option value="C">音乐</option>
-									<option value="S">其他</option>
-								</select>
-							</div>
-						</div>
-						<!-- </div> -->
-						<div class="col-sm-4">
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">教程/整活</button>
-								</span>
-								<select class="form-control mods">
-									<option value="all">所有</option>
-									<option value="0">教程</option>
-									<option value="1">整活</option>
-								</select>
-							</div>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
+                        <!--轮播图|media-current-->
+                        <div>
+                            <div id="media-layer-view">
+                                <div class="media-current">
+                                    <div class="media-main-pic">
+                                        <div class="media-img"></div>
+                                    </div>
 
-		<div class="table-responsive">
-			<table id="tb_results" class="table table-hover">
-				<thead>
-					<th class="序号">
-						序号
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-					<th class="作者">作者</th>
-					<th class="CIDT成员">
-						CIDT成员
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-					<th class="整活类型">整活类型</th>
-					<th class="投稿时间">投稿时间</th>
-					<th class="原贴名称">
-						原贴名称
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-					<th class="原帖地址">
-						原帖地址
-						<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-					</th>
-				</thead>
+                                    <div class="media-user-interactive" id="media-layer-front">
+                                        <div class="media-current-info">
+                                            <div class="media-info-wrapper">
+                                                <div class="media-info-serial"></div>
+                                                <div class="media-info-title"></div>
+                                                <div class="media-info-detail">
+                                                    <div class="media-detail-desc"></div>
+                                                </div>
+                                            </div>
 
-				<tbody>
+                                            <div class="media-nav-wrapper"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media-list-wrapper" id="media-list"></div>
+                            </div>
+                        </div>
 
-				</tbody>
-			</table>
+                        <!--右箭头|left-arrow-->
+                        <div id="right-arrow" class="arrow">
+                            <svg viewBox="0 0 1000 1000">
+                                <path
+                                    d="M721.4 499.8l1-1L298.2 74.6l-56.6 56.6 369 369-368.7 368.6 56.6 56.6 424.3-424.2z">
+                                </path>
+                            </svg>
+                        </div>
+                    </section>
+                    <div>
+                        <nav class="gate">
+                            <ul class="key">
+                                <li class="go-into">
+                                    <a data-pjax href="tablepage.html" title="作品列表">作品详情列表</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		</div>
-		<div class="button">
-			<span>作品详情列表</span>
-		</div>
-
-
-		<div class="placeholding" style="flex: 1"></div>
-		<footer>
-			<div class="container">
-				<span style="float:left">
-					相关up：<a href="https://space.bilibili.com/2070472" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @我就是曹某</a>
-					<a href="https://space.bilibili.com/933614" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @McKen</a>
-					<a href="https://space.bilibili.com/441955257" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @我的小马叫丁真</a>
-					<a href="https://space.bilibili.com/12120424" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @看客之眼</a>
-					<a href="https://space.bilibili.com/9564795" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @阿七寇大先生</a>
-					<a href="https://space.bilibili.com/379039" target="_blank"><i class="ri-bilibili-fill ri-xl"
-							style="color:#FF8EB3"></i> @Alpha初见</a>
-				</span>
-
-
-				<span style="float: right">
-					查看源代码：<a href="https://github.com/CIDT/cidt" target="_blank"><i class="ri-github-fill ri-xl"
-							style="color:white"></i> GitHub</a>&nbsp;&nbsp;&nbsp;
-				</span>
-			</div>
-		</footer>
+    <footer class="footer">
+        <div>
+            <span>
+                &copy; 2021-<script>
+                    document.write((new Date).getFullYear());
+                </script> CIDT |</span>
+            <span id="living-time"></span>
+            <script src="js/living-time.js"></script>
+            <span>
+                <a href="https://github.com/CIDT/cidt" target="_blank"><i class="ri-github-fill"
+                        style="color:white"></i> 源码</a>
+            </span>
+        </div>
+        <div>
+            <span>
+                相关up：<a href="https://space.bilibili.com/2070472" target="_blank"><i class="ri-bilibili-fill"
+                        style="color:#FF8EB3"></i> 我就是曹某</a>
+                <a href="https://space.bilibili.com/933614" target="_blank"><i class="ri-bilibili-fill"
+                        style="color:#FF8EB3"></i> McKen</a>
+                <a href="https://space.bilibili.com/441955257" target="_blank"><i class="ri-bilibili-fill"
+                        style="color:#FF8EB3"></i> 我的小马叫丁真</a>
+                <a href="https://space.bilibili.com/12120424" target="_blank"><i class="ri-bilibili-fill"
+                        style="color:#FF8EB3"></i> 看客之眼</a>
+                <a href="https://space.bilibili.com/9564795" target="_blank"><i class="ri-bilibili-fill"
+                        style="color:#FF8EB3"></i> 阿七寇大先生</a>
+                <a href="https://space.bilibili.com/379039" target="_blank"><i class="ri-bilibili-fill"
+                        style="color:#FF8EB3"></i> Alpha初见</a>
+            </span></div>
+    </footer>
+    <!--服务器使用-->
+    <script src="js/rolling-pic.js"></script>
+    <!--本地测试使用--
+        <script src="js/rolling_loc.js"></script>-->
+    <script src="js/movement.js"></script>
 </body>
-
-<script type="text/template" id="tb">
-
-	{{each data as v i}}
-<tr>
-    <td>{{v.序号}}</td>
-    <td>{{v.作者}}</td>
-    <td>{{v.CIDT成员}}</td>
-    <td>{{v.整活类型}}</td>
-    <td>{{v.投稿时间}}</td>
-	<td>{{v.原贴名称}}</td>
-	<td>
-		<a href="{{v.原帖地址}}" target="_blank">{{v.原帖地址}}</a>
-	</td>
-  </tr>
-  {{/each}}
-
-</script>
-
-
-
-<div class="tips" style="display: none;">
-	<div class="tips-content tips-content-mods">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-temperature">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-tyre">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-limit">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-ranking">
-		<h3></h3>
-		<p></p>
-	</div>
-
-	<div class="tips-content tips-content-speed">
-		<p></p>
-	</div>
-</div>
-</div>
 
 </html>
