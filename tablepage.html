@@ -11,95 +11,110 @@
 	<link rel="shortcut icon" href="img/cidt.ico">
 	<link rel="stylesheet" href="css/main.css">
 	<link href="css/table.css" rel="stylesheet">
-	<link href="css/button.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
 	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="./lib/template.js"></script>
-	<!--script src="./lib/canvas-bg/TweenLite.min.js"></script>
-	<script src="./lib/canvas-bg/EasePack.min.js"></script>
-	<script src="./lib/canvas-bg/rAF.js"></script-->
-	<script src="./lib/layer/layer.js"></script>
+	<script src="/js/template.js"></script>
 	<!--<script src="./js/index.js"></script>-->
 </head>
 
 <body class="cover">
 	<div class="main-div">
 		<div class="background"></div>
-		<div class="filler">
-			<div class="index_banner">
-				<table class="atable">
-					<tr>
-						<td><img src="./img/logo.png"></td>
-						<td class="hid">
-							<h1 class="title">CIDT作品指南</h1>
-							<h5 class="title">戴森球计划整活合集</h5>
-						</td>
-						<td class="options">
-							<div class="col-sm-4">
-								<div class="input-group">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">搜索作品</button>
-									</span>
-									<input type="text" class="form-control search" placeholder="关键字">
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="input-group">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">类型</button>
-									</span>
-									<select class="form-control lv">
-										<option value="all">所有</option>
-										<option value="A00">球雕</option>
-										<option value="A0">蓝图</option>
-										<option value="A">mod</option>
-										<option value="B">机甲</option>
-										<option value="C">音乐</option>
-										<option value="S">其他</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="input-group">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">教程/整活</button>
-									</span>
-									<select class="form-control mods">
-										<option value="all">所有</option>
-										<option value="0">教程</option>
-										<option value="1">整活</option>
-									</select>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</table>
+		<div>
+			<header class="lab-top">
+				<div id="navbar-gate" title="菜单">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="name-box">
+					<a data-pjax href="#"><span class="web-font lab-title">CI<img src="/img/cidt.png"
+								class="avatar">DT</span></a>
+				</div>
+				<div class="lab-container">
+					<ul class="lab-select">
+						<li class="lab-li"><a data-pjax href="/">首页</a></li>
+						<li class="lab-li"><a data-pjax href="#">主页</a></li>
+						<li class="lab-li"><a data-pjax href="/tablepage">归档</a></li>
+						<li class="lab-li"><a data-pjax href="#">分类</a></li>
+						<li class="lab-li"><a data-pjax href="#">关于</a></li>
+					</ul>
+				</div>
+			</header>
+
+			<div id="search-bar">
+				<div class="options">
+					<div class="search-box">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn-default" type="button">搜索作品</button>
+							</span>
+							<input type="text" class="form-control form-text-height" placeholder="关键字">
+						</div>
+					</div>
+					<div class="search-box">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn-default" type="button">类　　型</button>
+							</span>
+							<select class="form-control form-height">
+								<option value="all">所有</option>
+								<option value="A00">球雕</option>
+								<option value="A0">蓝图</option>
+								<option value="A">mod</option>
+								<option value="B">机甲</option>
+								<option value="C">音乐</option>
+								<option value="S">其他</option>
+							</select>
+						</div>
+					</div>
+					<div class="search-box">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn-default" type="button">教程/整活</button>
+							</span>
+							<select class="form-control form-height">
+								<option value="all">所有</option>
+								<option value="0">教程</option>
+								<option value="1">整活</option>
+							</select>
+						</div>
+					</div>
+				</div>
 			</div>
 
+			<nav id="sidebar">
+				<ul class="sidebar-list">
+					<div><a data-pjax href="/">
+							<li>首页</li>
+						</a></div>
+					<div><a data-pjax href="#">
+							<li>主页</li>
+						</a></div>
+					<div><a data-pjax href="/tablepage">
+							<li>归档</li>
+						</a></div>
+					<div><a data-pjax href="#">
+							<li>分类</li>
+						</a></div>
+					<div><a data-pjax href="#">
+							<li>关于</li>
+						</a></div>
+				</ul>
+			</nav>
+
 			<div class="table-responsive">
-				<table id="tb_results" class="table table-hover">
+				<div class="top-blank"></div>
+				<h2 class="title">戴森球计划整活合集</h2>
+				<table id="tb_results" class="table-area">
 					<thead>
-						<th class="序号">
-							序号
-							<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-						</th>
-						<th class="作者">作者</th>
-						<th class="CIDT成员">
-							CIDT成员
-							<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-						</th>
-						<th class="整活类型">整活类型</th>
-						<th class="投稿时间">投稿时间</th>
-						<th class="原贴名称">
-							原贴名称
-							<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-						</th>
-						<th class="原帖地址">
-							原帖地址
-							<!-- <img src="./img/tips_alarm.png" alt="" class="icon"> -->
-						</th>
+						<th class="tb-num">序号</th>
+						<th class="tb-author">作者</th>
+						<th class="tb-cidt">CIDT成员</th>
+						<th class="tb-type">整活类型</th>
+						<th class="tb-time">投稿时间</th>
+						<th class="tb-name">原贴名称</th>
+						<th class="tb-link">原帖地址</th>
 					</thead>
 
 					<tbody>
@@ -141,6 +156,8 @@
 		</footer>
 </body>
 
+<script src="js/searchbar.js"></script>
+<script src="js/sidebar.js"></script>
 <script type="text/template" id="tb">
 
 	{{each data as v i}}
