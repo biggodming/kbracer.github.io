@@ -124,6 +124,60 @@ request.onload = function () {
   })
 
   /**
+   * 自动切换
+   */
+  var timer;
+  const minilist=document.querySelector('.media-nav-wrapper')
+  const minipic=document.querySelector('#media-list')
+  const showingpic=document.querySelector('.media-img')
+  timer = setInterval(autoturn, 5000);
+
+  function autoturn() {
+    activeIndex < carouselList.length - 1 ? activeIndex++ : (activeIndex = 0)
+    carouselItemSwitching(activeIndex, 'left')
+  }
+
+  minilist.addEventListener('mouseover',() =>{
+    clearInterval(timer)
+  })
+
+  minipic.addEventListener('mouseover',() =>{
+    clearInterval(timer)
+  })
+
+  showingpic.addEventListener('mouseover',() =>{
+    clearInterval(timer)
+  })
+
+  arrowBtnNext.addEventListener('mouseover',() =>{
+    clearInterval(timer)
+  })
+
+  arrowBtnPrev.addEventListener('mouseover',() =>{
+    clearInterval(timer)
+  })
+
+  minilist.addEventListener('mouseout',() =>{
+    timer = setInterval(autoturn, 5000);
+  })
+
+  minipic.addEventListener('mouseout',() =>{
+    timer = setInterval(autoturn, 5000);
+  })
+
+  showingpic.addEventListener('mouseout',() =>{
+    timer = setInterval(autoturn, 5000);
+  })
+
+  arrowBtnNext.addEventListener('mouseout',() =>{
+    timer = setInterval(autoturn, 5000);
+  })
+
+  arrowBtnPrev.addEventListener('mouseout',() =>{
+    timer = setInterval(autoturn, 5000);
+  })
+
+  /**
    * 轮播切换
    * @param {number} index 激活的索引
    * @param {string} direction 方向 (1.'left', 2.'right')

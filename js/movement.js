@@ -1,5 +1,5 @@
-const mouse = { x: 0, y: 0 } // 遊標位置
-const pos = { x: 0, y: 0 } // 跟蹤到達位置
+const mouse = { x: 0, y: 0 } // 检测鼠标
+const pos = { x: 0, y: 0 } // 鼠标跟踪
 
 document
   .querySelector('body')
