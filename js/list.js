@@ -21,25 +21,25 @@ $(function () {
       url: '../json/list.json',
       async: false,
       success: function (res) {
-        console.log(res);
+        //console.log(res);
         jsonData = res
       }
     })
     setTable(jsonData)
   
-    $('.mods,.lv').on('change', function () {
+    $('.mods,.Type').on('change', function () {
       // screen($(this).val())
       screen()
     })
     // 筛选
     function screen() {
-      var lv = $('.lv').val(),
+      var Type = $('.Type').val(),
         mods = $('.mods').val(),
         arr = jsonData
   
-      if (lv !== 'all') {
+      if (Type !== 'all') {
         arr = jsonData.filter(function (v) {
-          return v.lv == lv
+          return v.Type == Type
         })
       }
   
@@ -62,7 +62,7 @@ $(function () {
     $('.search').on('input', function () {
       var val = $(this).val().toLowerCase()
       var arr = jsonData.filter(v => {
-        return v.car.toLowerCase().indexOf(val) != -1
+        return v.BVname.toLowerCase().indexOf(val) != -1
       })
       setTable(arr)
     })
