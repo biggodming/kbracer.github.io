@@ -36,14 +36,16 @@ $(function () {
       var Type = $('.Type').val(),
         mods = $('.mods').val(),
         arr = jsonData
+        //console.log(Type)
   
       if (Type !== 'all') {
         arr = jsonData.filter(function (v) {
           return v.Type == Type
         })
       }
+      //console.log(arr)
   
-      if (mods == 'all') {
+      /*if (mods == 'all') {
         // setTable(jsonData)
       } else if (mods == 0) {
         arr = arr.filter(function (v) {
@@ -53,7 +55,7 @@ $(function () {
         arr = arr.filter(function (v) {
           return v.mods > 0
         })
-      }
+      }*/
   
       setTable(arr)
     }

@@ -42,6 +42,26 @@
 				</div>
 			</header>
 
+			<nav id="sidebar">
+				<ul class="sidebar-list">
+					<div><a data-pjax href="/">
+							<li>首页</li>
+						</a></div>
+					<div><a data-pjax href="#">
+							<li>主页</li>
+						</a></div>
+					<div><a data-pjax href="/tablepage">
+							<li>归档</li>
+						</a></div>
+					<div><a data-pjax href="#">
+							<li>分类</li>
+						</a></div>
+					<div><a data-pjax href="#">
+							<li>关于</li>
+						</a></div>
+				</ul>
+			</nav>
+
 			<div id="search-bar">
 				<div class="options">
 					<div class="search-box">
@@ -83,33 +103,13 @@
 				</div>
 			</div>
 
-			<nav id="sidebar">
-				<ul class="sidebar-list">
-					<div><a data-pjax href="/">
-							<li>首页</li>
-						</a></div>
-					<div><a data-pjax href="#">
-							<li>主页</li>
-						</a></div>
-					<div><a data-pjax href="/tablepage">
-							<li>归档</li>
-						</a></div>
-					<div><a data-pjax href="#">
-							<li>分类</li>
-						</a></div>
-					<div><a data-pjax href="#">
-							<li>关于</li>
-						</a></div>
-				</ul>
-			</nav>
-
 			<div class="table-responsive">
 				<div class="top-blank"></div>
+
 				<h2 class="title">戴森球计划整活合集</h2>
 				<table id="tb_results" class="table-area">
 					<thead>
 						<th class="tb-author">作者</th>
-						<th class="tb-cidt">CIDT成员</th>
 						<th class="tb-type">整活类型</th>
 						<th class="tb-time">投稿时间</th>
 						<th class="tb-name">链接</th>
@@ -154,13 +154,12 @@
 		</footer>
 </body>
 
-<script src="js/searchbar.js"></script>
+<!--<script src="js/searchbar.js"></script>-->
 <script src="js/sidebar.js"></script>
 <script type="text/template" id="tb">
 	{{each data as v i}}
 <tr>
     <td class="td-author">{{v.author}}</td>
-    <td>{{v.IFcidt}}</td>
     <td>{{v.Type}}</td>
     <td>{{v.Time}}</td>
 	<td>
