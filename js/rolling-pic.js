@@ -50,11 +50,13 @@ request.onload = function () {
   const mediaTitle = layerFront.querySelector('.media-info-title')
   const mediaDetail = layerFront.querySelector('.media-info-detail')
   const mediaMainPic = document.querySelector('#media-layer-view .media-main-pic')
-  const mediaImage = mediaMainPic.querySelector('.media-img')
+  const mediaLink = mediaMainPic.querySelector('.media-link')
+  const mediaImage = mediaLink.querySelector('.media-img')
   const mediaList = document.querySelector('#media-list')
 
   // 初始化咨询
   mediaImage.style = `background-image: url(${carouselList[0].thumbnail}); transform-origin: left top; transform: scale(1)`
+  mediaLink.href = `https://www.bilibili.com/video/${carouselList[0].bvlink}`
   mediaSerial.innerHTML = carouselList[0].serial
   mediaTitle.innerHTML = carouselList[0].title
   mediaDetail.innerHTML = carouselList[0].desc
@@ -128,8 +130,6 @@ request.onload = function () {
    */
   var timer;
   const minilist=document.querySelector('.media-nav-wrapper')
-  const minipic=document.querySelector('#media-list')
-  const showingpic=document.querySelector('.media-img')
   timer = setInterval(autoturn, 5000);
 
   function autoturn() {
@@ -141,11 +141,11 @@ request.onload = function () {
     clearInterval(timer)
   })
 
-  minipic.addEventListener('mouseover',() =>{
+  mediaList.addEventListener('mouseover',() =>{
     clearInterval(timer)
   })
 
-  showingpic.addEventListener('mouseover',() =>{
+  mediaImage.addEventListener('mouseover',() =>{
     clearInterval(timer)
   })
 
@@ -161,11 +161,11 @@ request.onload = function () {
     timer = setInterval(autoturn, 5000);
   })
 
-  minipic.addEventListener('mouseout',() =>{
+  mediaList.addEventListener('mouseout',() =>{
     timer = setInterval(autoturn, 5000);
   })
 
-  showingpic.addEventListener('mouseout',() =>{
+  mediaImage.addEventListener('mouseout',() =>{
     timer = setInterval(autoturn, 5000);
   })
 
@@ -252,9 +252,9 @@ request.onload = function () {
       newImgTransformOrigin = 'left top'
     }
 
-    mediaMainPic.innerHTML += mediaMainPic.innerHTML
-    const mediaOldImg = mediaMainPic.querySelector('.media-img:nth-child(1)')
-    const mediaNewImg = mediaMainPic.querySelector('.media-img:nth-child(2)')
+    mediaLink.innerHTML += mediaLink.innerHTML
+    const mediaOldImg = mediaLink.querySelector('.media-img:nth-child(1)')
+    const mediaNewImg = mediaLink.querySelector('.media-img:nth-child(2)')
     mediaNewImg.style.backgroundImage = `url(${newUrl})`
 
     mediaOldImg.style.transformOrigin = oldImgTransformOrigin
@@ -269,7 +269,7 @@ request.onload = function () {
     mediaOldImg.style.transform = 'scale(0)'
     mediaNewImg.style.transform = 'scale(1)'
     await sleep(duration * 1000)
-    mediaMainPic.innerHTML = mediaNewImg.outerHTML
+    mediaLink.innerHTML = mediaNewImg.outerHTML
   }
 
   function setSlidePosition(activeIndex) {
