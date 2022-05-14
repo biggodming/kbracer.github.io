@@ -334,10 +334,7 @@ ul {
 @media (any-hover: hover){
     a:hover {
         color: rgb(242, 156, 177);
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -o-transition: 0.5s;
-        -ms-transition: 0.5s;
+        transition: 0.5s;
     }
 }
 
