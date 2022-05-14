@@ -329,12 +329,6 @@
     transition: 0.5s;
 }
 
-.go-into a:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgb(242, 156, 177);
-    border: 0.2rem solid rgb(242, 156, 177);
-}
-
 @media (any-hover: hover){
     .arrow svg:hover{
         fill: #eee;
@@ -342,6 +336,12 @@
 
     .media-nav-item:hover::after{
         background-color: #f3a602 !important;
+    }
+
+    .go-into a:hover {
+        color: rgb(0, 0, 0);
+        background-color: rgb(242, 156, 177);
+        border: 0.2rem solid rgb(242, 156, 177);
     }
 }
 
