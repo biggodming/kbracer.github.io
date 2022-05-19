@@ -104,6 +104,13 @@
     transform: translateZ(1px);
 }
 
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
 #floatbox {
     position: relative;
     display: flex;

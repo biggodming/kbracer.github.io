@@ -310,6 +310,7 @@ ul {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+    padding: 0 2%;
 	padding-bottom: 10px;
     bottom: 0;
     left: 0;
@@ -329,6 +330,11 @@ ul {
 
 .footer span{
 	color: #5cb6f3;
+}
+
+.footersvg{
+    width: 1.2rem;
+    vertical-align: middle;
 }
 
 @media (any-hover: hover){
@@ -352,4 +358,8 @@ ul {
 	.footer div{
 		font-size: x-small;
 	}
+
+    .footersvg{
+        width: 1rem;
+    }
 }
