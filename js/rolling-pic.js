@@ -129,7 +129,7 @@ request.onload = function () {
    * 自动切换
    */
   var timer;
-  const minilist=document.querySelector('.media-nav-wrapper')
+  const minilist = document.querySelector('.media-nav-wrapper')
   timer = setInterval(autoturn, 5000);
 
   function autoturn() {
@@ -137,43 +137,43 @@ request.onload = function () {
     carouselItemSwitching(activeIndex, 'left')
   }
 
-  minilist.addEventListener('mouseover',() =>{
+  minilist.addEventListener('mouseover', () => {
     clearInterval(timer)
   })
 
-  mediaList.addEventListener('mouseover',() =>{
+  mediaList.addEventListener('mouseover', () => {
     clearInterval(timer)
   })
 
-  mediaImage.addEventListener('mouseover',() =>{
+  mediaImage.addEventListener('mouseover', () => {
     clearInterval(timer)
   })
 
-  arrowBtnNext.addEventListener('mouseover',() =>{
+  arrowBtnNext.addEventListener('mouseover', () => {
     clearInterval(timer)
   })
 
-  arrowBtnPrev.addEventListener('mouseover',() =>{
+  arrowBtnPrev.addEventListener('mouseover', () => {
     clearInterval(timer)
   })
 
-  minilist.addEventListener('mouseout',() =>{
+  minilist.addEventListener('mouseout', () => {
     timer = setInterval(autoturn, 5000);
   })
 
-  mediaList.addEventListener('mouseout',() =>{
+  mediaList.addEventListener('mouseout', () => {
     timer = setInterval(autoturn, 5000);
   })
 
-  mediaImage.addEventListener('mouseout',() =>{
+  mediaImage.addEventListener('mouseout', () => {
     timer = setInterval(autoturn, 5000);
   })
 
-  arrowBtnNext.addEventListener('mouseout',() =>{
+  arrowBtnNext.addEventListener('mouseout', () => {
     timer = setInterval(autoturn, 5000);
   })
 
-  arrowBtnPrev.addEventListener('mouseout',() =>{
+  arrowBtnPrev.addEventListener('mouseout', () => {
     timer = setInterval(autoturn, 5000);
   })
 
@@ -194,6 +194,7 @@ request.onload = function () {
       .querySelector(`.media-nav-item:nth-child(${index + 1})`)
       .setAttribute('active', true)
 
+    mediaLink.href = `https://www.bilibili.com/video/${carouselList[index].bvlink}`
     imageZoom(0.25, direction, carouselList[index].thumbnail)
     slideInText(mediaSerial, direction, 0.2, 0.4, carouselList[index].serial)
     slideInText(mediaTitle, direction, 0.2, 0.5, carouselList[index].title)

@@ -15,122 +15,177 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap"
         media="all" onload="this.media='all'">
-    <!--<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.7/fullpage.min.css"
+        integrity="sha512-UAJzvXdoBJReHrVgQJR2nNYWuW6GoW6aLUI1DNWlily9LYwaUILr/7Qc8ve8aFwk1d+x+JHU89cKTrrvWaHAXQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="http://www.xiuc.top/i.js"></script>
-
 </head>
 
-<body class="cover">
-    <!--主体盒子|mainbox-->
-    <div class="maindiv">
-        <!--背景|background-->
-        <div class="background"></div>
-        <!--元素|element-->
-        <div class="banner">
-            <div class="main-inner">
-                <!--定界框|border-area-->
-                <div class="show-container">
-                    <!--<div class="title">
-                        <h1>戴森球计划宇宙设计与科学研究院</h1>
-                        <h5>[ DSP ] Cosmical Institute of Design and Technology</h5>
-                    </div>-->
-                    <!--轮播|flow-->
-                    <section id="floatbox">
-                        <!--左箭头|left-arrow-->
-                        <div id="left-arrow" class="arrow">
-                            <svg viewBox="0 0 1000 1000">
-                                <path
-                                    d="M100.1 499.1l-1 1 424.3 424.3 56.6-56.6-369.1-369 368.7-368.7L523 73.5 98.8 497.8z">
-                                </path>
-                            </svg>
-                        </div>
 
-                        <!--轮播图|media-current-->
-                        <div>
-                            <div id="media-layer-view">
-                                <div class="media-current">
+<body>
+    <header class="lab-top">
+        <div id="navbar-gate" title="菜单">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="name-box">
+            <a href="#"><span class="web-font lab-title">CI<img src="/img/cidt.png" class="avatar">DT</span></a>
+        </div>
+        <div class="lab-container">
+            <ul class="lab-select" id="menu">
+                <li data-menuanchor="1st" class="lab-li active"><a href="#1st">首页</a></li>
+                <li data-menuanchor="2nd" class="lab-li"><a href="#2nd">主页</a></li>
+                <li data-menuanchor="3rd" class="lab-li"><a href="#3rd">归档</a></li>
+                <li data-menuanchor="4th" class="lab-li"><a href="#4th">分类</a></li>
+                <li data-menuanchor="5th" class="lab-li"><a href="#5th">关于</a></li>
+            </ul>
+        </div>
+    </header>
 
-                                    <div class="icon"></div>
+    <nav id="sidebar">
+        <ul class="sidebar-list">
+            <div><a href="/">
+                    <li>首页</li>
+                </a></div>
+            <div><a href="#">
+                    <li>主页</li>
+                </a></div>
+            <div><a href="/tablepage">
+                    <li>归档</li>
+                </a></div>
+            <div><a href="#">
+                    <li>分类</li>
+                </a></div>
+            <div><a href="#">
+                    <li>关于</li>
+                </a></div>
+        </ul>
+    </nav>
 
-                                    <div class="media-main-pic">
-                                        <a class="media-link" target="_blank">
-                                            <div class="media-img"></div>
-                                        </a>
-                                    </div>
+    <div id="fullpage">
+        <!--主页-->
+        <div class="section fp-section fp-table">Some section</div>
 
-                                    <div class="media-user-interactive" id="media-layer-front">
-                                        <div class="media-current-info">
-                                            <div class="media-info-wrapper">
+        <!--轮播-->
+        <div class="section fp-section fp-table">
+            <div class="background" style="background-image: url(../img/background.jpg); "></div>
+            <div class="show-container">
+                <section id="floatbox">
+                    <!--左箭头|left-arrow-->
+                    <div id="left-arrow" class="arrow">
+                        <svg viewBox="0 0 1000 1000">
+                            <path
+                                d="M100.1 499.1l-1 1 424.3 424.3 56.6-56.6-369.1-369 368.7-368.7L523 73.5 98.8 497.8z">
+                            </path>
+                        </svg>
+                    </div>
 
-                                                <div class="media-info-title"></div>
-                                                <div class="media-info-detail"></div>
-                                            </div>
+                    <!--轮播图|media-current-->
+                    <div>
+                        <div id="media-layer-view">
+                            <div class="media-current">
 
-                                            <div class="media-right-text">
-                                                <div class="media-info-serial"></div>
-                                                <div class="media-nav-wrapper"></div>
-                                            </div>
+                                <div class="icon"></div>
+
+                                <div class="media-main-pic">
+                                    <a class="media-link" target="_blank">
+                                        <div class="media-img"></div>
+                                    </a>
+                                </div>
+
+                                <div class="media-user-interactive" id="media-layer-front">
+                                    <div class="media-current-info">
+                                        <div class="media-info-wrapper">
+
+                                            <div class="media-info-title"></div>
+                                            <div class="media-info-detail"></div>
+                                        </div>
+
+                                        <div class="media-right-text">
+                                            <div class="media-info-serial"></div>
+                                            <div class="media-nav-wrapper"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="media-list-wrapper" id="media-list"></div>
                             </div>
+                            <div class="media-list-wrapper" id="media-list"></div>
                         </div>
-
-                        <!--右箭头|left-arrow-->
-                        <div id="right-arrow" class="arrow">
-                            <svg viewBox="0 0 1000 1000">
-                                <path
-                                    d="M721.4 499.8l1-1L298.2 74.6l-56.6 56.6 369 369-368.7 368.6 56.6 56.6 424.3-424.2z">
-                                </path>
-                            </svg>
-                        </div>
-                    </section>
-                    <div>
-                        <nav class="gate">
-                            <ul class="key">
-                                <li class="go-into">
-                                    <a data-pjax href="tablepage.html" title="作品列表">作品详情列表</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
+
+                    <!--右箭头|left-arrow-->
+                    <div id="right-arrow" class="arrow">
+                        <svg viewBox="0 0 1000 1000">
+                            <path d="M721.4 499.8l1-1L298.2 74.6l-56.6 56.6 369 369-368.7 368.6 56.6 56.6 424.3-424.2z">
+                            </path>
+                        </svg>
+                    </div>
+                </section>
+
+                <!--按钮-->
+                <div>
+                    <nav class="gate">
+                        <ul class="key">
+                            <li class="go-into">
+                                <a data-pjax href="tablepage.html" title="作品列表">作品详情列表</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <footer class="footer">
-                    <div>
-                        <span>
-                            &copy; 2021-<script>
-                                document.write((new Date).getFullYear());
-                            </script> CIDT |</span>
-                        <span id="living-time"></span>
-                        <script src="js/living-time.js"></script>
-                        <span>
-                            <a href="https://github.com/CIDT/cidt" target="_blank"><img src="/svg/github-fill.svg"
-                                    class="footersvg"> 源码</a>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            相关up：<a href="https://space.bilibili.com/2070472" target="_blank">
-                                <img src="/svg/bilibili-fill.svg" class="footersvg">我就是曹某</a>
-                            <a href="https://space.bilibili.com/933614" target="_blank"><img
-                                    src="/svg/bilibili-fill.svg" class="footersvg"> McKen</a>
-                            <a href="https://space.bilibili.com/441955257" target="_blank"><img
-                                    src="/svg/bilibili-fill.svg" class="footersvg"> 我的小马叫丁真</a>
-                            <a href="https://space.bilibili.com/12120424" target="_blank"><img
-                                    src="/svg/bilibili-fill.svg" class="footersvg"> 看客之眼</a>
-                            <a href="https://space.bilibili.com/9564795" target="_blank"><img
-                                    src="/svg/bilibili-fill.svg" class="footersvg"> 阿七寇大先生</a>
-                            <a href="https://space.bilibili.com/379039" target="_blank"><img
-                                    src="/svg/bilibili-fill.svg" class="footersvg"> Alpha初见</a>
-                        </span></div>
-                </footer>
             </div>
+
+            <script src="js/rolling-pic.js"></script>
+            <script src="js/movement.js"></script>
         </div>
+
+        <!--01-->
+        <div class="section fp-section fp-table">Some section</div>
+        <!--02-->
+        <div class="section fp-section fp-table">Some section</div>
+        <div class="section fp-section fp-table">Some section</div>
     </div>
-
-    <script src="js/rolling-pic.js"></script>
-    <script src="js/movement.js"></script>
+    <footer class="footer">
+        <div>
+            <span>
+                &copy; 2021-<script>
+                    document.write((new Date).getFullYear());
+                </script> CIDT |</span>
+            <span id="living-time"></span>
+            <script src="js/living-time.js"></script>
+            <span>
+                <a href="https://github.com/CIDT/cidt" target="_blank"><img src="/svg/github-fill.svg"
+                        class="footersvg"> 源码</a>
+            </span>
+        </div>
+        <div>
+            <span>
+                相关up：<a href="https://space.bilibili.com/2070472" target="_blank">
+                    <img src="/svg/bilibili-fill.svg" class="footersvg">我就是曹某</a>
+                <a href="https://space.bilibili.com/933614" target="_blank"><img src="/svg/bilibili-fill.svg"
+                        class="footersvg"> McKen</a>
+                <a href="https://space.bilibili.com/441955257" target="_blank"><img src="/svg/bilibili-fill.svg"
+                        class="footersvg"> 我的小马叫丁真</a>
+                <a href="https://space.bilibili.com/12120424" target="_blank"><img src="/svg/bilibili-fill.svg"
+                        class="footersvg"> 看客之眼</a>
+                <a href="https://space.bilibili.com/9564795" target="_blank"><img src="/svg/bilibili-fill.svg"
+                        class="footersvg"> 阿七寇大先生</a>
+                <a href="https://space.bilibili.com/379039" target="_blank"><img src="/svg/bilibili-fill.svg"
+                        class="footersvg"> Alpha初见</a>
+                <a href="https://space.bilibili.com/2023988132" target="_blank"><img src="/svg/bilibili-fill.svg"
+                        class="footersvg"> bWFuanVzYWth</a>
+            </span></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.7/fullpage.min.js"
+        integrity="sha512-MLy5YE5Hiyow/qhqZAsO91PjjWUBngedTSWTdvSbEPjFienlVY6SJ8Uy7eLHkudkv3kTJ7NFHZ9s0JD/UwpHdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var myFullpage = new fullpage('#fullpage', {
+            anchors: ['1st', '2nd', '3rd', '4th', '5th'],
+            menu: '#menu',
+            scrollBar: true
+        });
+    </script>
 </body>
-
-</html>
