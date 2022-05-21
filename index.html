@@ -72,14 +72,16 @@
             <div class="background" style="background-image: url(/img/background/12.png); "></div>
             <div class="show-container">
                 <a class="logo-box" href="#">
-                        <img src="/img/DSP.png">
-                        <span></span>
-                        <img src="/img/M-CIDT.png">
+                    <img src="/img/DSP.png" class="dsp-logo">
+                    <span></span>
+                    <img src="/img/M-CIDT.png" class="cidt-logo">
                 </a>
                 <div class="letter-box">
                     <span>戴森球计划宇宙设计与科学研究院</span>
                     <span>[ DSP ] Cosmical Institute of Design and Technology</span></div>
-                <img src="/img/letter.png">
+                <img src="/img/letter.png" class="en-letter">
+                <div class="letter-box"><span id="living-time"></span></div>
+                <script src="js/living-time.js"></script>
             </div>
         </div>
 
@@ -172,8 +174,6 @@
                 &copy; 2021-<script>
                     document.write((new Date).getFullYear());
                 </script> CIDT |</span>
-            <span id="living-time"></span>
-            <script src="js/living-time.js"></script>
             <span>
                 <a href="https://github.com/CIDT/cidt" target="_blank"><img src="/svg/github-fill.svg"
                         class="footersvg"> 源码</a>

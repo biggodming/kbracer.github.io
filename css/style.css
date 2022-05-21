@@ -158,6 +158,7 @@
 }
 
 .logo-box {
+    max-width: 40%;
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.3);
@@ -167,7 +168,14 @@
 
 .logo-box img {
     width: 20%;
-    margin: 0 5rem;
+}
+
+.dsp-logo{
+    margin-right: 4rem;
+}
+
+.cidt-logo{
+    margin-left: 4rem;
 }
 
 .logo-box span {
@@ -186,6 +194,10 @@
 .letter-box span{
     font-size: xx-large;
     margin: 0.5rem 0;
+}
+
+.en-letter{
+    width: 40%;
 }
 
 #floatbox {
