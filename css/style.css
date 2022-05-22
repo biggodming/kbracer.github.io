@@ -1,3 +1,4 @@
+/*顶栏*/
 .lab-top {
     position: fixed;
     text-align: center;
@@ -130,6 +131,7 @@
     padding: 10px 30px;
 }
 
+/*全局*/
 .background {
     width: 100%;
     height: 100%;
@@ -157,6 +159,7 @@
     transform: translateZ(1px);
 }
 
+/*首页*/
 .logo-box {
     max-width: 40%;
     display: flex;
@@ -200,6 +203,7 @@
     width: 40%;
 }
 
+/*banner*/
 #floatbox {
     position: relative;
     display: flex;
@@ -423,10 +427,12 @@
     transition: 0.5s;
 }
 
+/*水印*/
 .fp-watermark {
     display: none;
 }
 
+/*适配*/
 @media (any-hover: hover) {
     .avatar:hover {
         transition: all 1s;
@@ -454,6 +460,20 @@
         color: rgb(0, 0, 0);
         background-color: rgb(242, 156, 177);
         border: 0.2rem solid rgb(242, 156, 177);
+    }
+}
+
+@media all and (max-width: 1920px){
+    .logo-box {
+        border-radius: 3rem;
+    }
+    
+    .dsp-logo{
+        margin-right: 3rem;
+    }
+    
+    .cidt-logo{
+        margin-left: 3rem;
     }
 }
 
@@ -490,6 +510,10 @@
 
 @media all and (max-width:960px),
 (max-height:900px) {
+    .letter-box span{
+        font-size: larger;
+    }
+
     .media-main-pic {
         width: 32rem;
         height: 18rem;
@@ -558,6 +582,27 @@
 
 @media all and (max-width: 768px),
 (max-height: 650px) {
+    .logo-box {
+        border-radius: 2rem;
+        padding: 1rem 0;
+    }
+
+    .logo-box span{
+        width: 3px;
+    }
+    
+    .dsp-logo{
+        margin-right: 2rem;
+    }
+    
+    .cidt-logo{
+        margin-left: 2rem;
+    }
+
+    .letter-box span{
+        font-size: large;
+    }
+
     .icon {
         width: 80px;
         height: 80px;
@@ -659,12 +704,24 @@
 }
 
 @media all and (max-width:550px) {
+    .logo-box {
+        max-width: 60%;
+    }
+
+    .en-letter{
+        width: 60%;
+    }
+
     .avatar {
         display: none;
     }
 
     .lab-title {
         line-height: 60px;
+    }
+
+    .letter-box span{
+        font-size: medium;
     }
 
     #right-arrow {
