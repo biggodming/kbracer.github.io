@@ -37,50 +37,56 @@
         </div>
         <div class="lab-container">
             <ul class="lab-select" id="menu">
-                <li data-menuanchor="1st" class="lab-li active"><a href="#1st">首页</a></li>
-                <li data-menuanchor="2nd" class="lab-li"><a href="#2nd">主页</a></li>
-                <li data-menuanchor="3rd" class="lab-li"><a href="#3rd">归档</a></li>
-                <li data-menuanchor="4th" class="lab-li"><a href="#4th">分类</a></li>
-                <li data-menuanchor="5th" class="lab-li"><a href="#5th">关于</a></li>
+                <li data-menuanchor="1st" class="active"><a href="#1st">首页</a></li>
+                <li data-menuanchor="2nd"><a href="#2nd">主页</a></li>
+                <li data-menuanchor="3rd"><a href="#3rd">归档</a></li>
+                <li data-menuanchor="4th"><a href="#4th">分类</a></li>
+                <li data-menuanchor="5th"><a href="#5th">关于</a></li>
             </ul>
         </div>
     </header>
 
     <nav id="sidebar">
-        <ul class="sidebar-list">
-            <div><a href="/">
-                    <li>首页</li>
-                </a></div>
-            <div><a href="#">
-                    <li>主页</li>
-                </a></div>
-            <div><a href="/tablepage">
-                    <li>归档</li>
-                </a></div>
-            <div><a href="#">
-                    <li>分类</li>
-                </a></div>
-            <div><a href="#">
-                    <li>关于</li>
-                </a></div>
+        <ul class="sidebar-list" id="menu">
+            <div>
+                <li data-menuanchor="1st" class="lab-li active"><a href="#1st">首页</a></li>
+            </div>
+            <div>
+                <li data-menuanchor="2nd" class="lab-li"><a href="#2nd">主页</a></li>
+            </div>
+            <div>
+                <li data-menuanchor="3rd" class="lab-li"><a href="#3rd">归档</a></li>
+            </div>
+            <div>
+                <li data-menuanchor="4th" class="lab-li"><a href="#4th">分类</a></li>
+            </div>
+            <div>
+                <li data-menuanchor="5th" class="lab-li"><a href="#5th">关于</a></li>
+            </div>
         </ul>
     </nav>
+    <script src="/js/sidebar.js"></script>
 
     <div id="fullpage">
         <!--主页-->
         <div class="section fp-section fp-table">
             <div class="background" style="background-image: url(/img/background/12.png); "></div>
             <div class="show-container">
-                <a class="logo-box" href="#">
-                    <img src="/img/DSP.png" class="dsp-logo">
-                    <span></span>
-                    <img src="/img/M-CIDT.png" class="cidt-logo">
-                </a>
                 <div class="letter-box">
-                    <span>戴森球计划宇宙设计与科学研究院</span>
-                    <span>[ DSP ] Cosmical Institute of Design and Technology</span></div>
-                <img src="/img/letter.png" class="en-letter">
-                <div class="letter-box"><span id="living-time"></span></div>
+                    <span class="web-font name-zh">戴森球计划宇宙设计与科学研究院</span>
+                    <span class="web-font name-en">[ DSP ] <span class="letter-important">C</span>osmical <span
+                            class="letter-important">I</span>nstitute of <span class="letter-important">D</span>esign
+                        and
+                        <span class="letter-important">T</span>echnology</span></div>
+                <div class="shower-box">
+                    <div class="logo-box">
+                        <a href="#" class="dsp-logo"><img src="/img/DSP.png"></a>
+                        <span></span>
+                        <a href="#" class="cidt-logo"><img src="/img/M-CIDT.png"></a>
+                    </div>
+                    <img src="/img/letter.png" class="en-letter">
+                </div>
+                <div class="letter-box"><span id="living-time" class="web-font name-en"></span></div>
                 <script src="js/living-time.js"></script>
             </div>
         </div>
@@ -145,7 +151,7 @@
                     <nav class="gate">
                         <ul class="key">
                             <li class="go-into">
-                                <a data-pjax href="tablepage.html" title="作品列表">作品详情列表</a>
+                                <a href="tablepage.html" title="作品列表">作品详情列表</a>
                             </li>
                         </ul>
                     </nav>
@@ -160,14 +166,36 @@
         <div class="section fp-section fp-table">
             <div class="background" style="background-image: url(/img/background/06.png); "></div>
         </div>
-        <!--02-->
+
+        <!--工具-->
         <div class="section fp-section fp-table">
-            <div class="background" style="background-image: url(/img/background/07.png); "></div>
+            <div class="slide">
+                <div class="background" style="background-image: url(/img/background/07.png); "></div>
+                <div class="show-container">
+                    <span>常用工具</span>
+                    <div></div>
+                </div>
+                <div></div>
+            </div>
+            <div class="slide">
+                <div class="show-container"></div>
+            </div>
+            <div class="slide">
+                <div class="show-container"></div>
+            </div>
+            <div class="slide">
+                <div class="show-container"></div>
+            </div>
+            <div class="slide">
+                <div class="show-container"></div>
+            </div>
         </div>
+
         <div class="section fp-section fp-table">
             <div class="background" style="background-image: url(/img/background/08.png); "></div>
         </div>
     </div>
+
     <footer class="footer">
         <div>
             <span>

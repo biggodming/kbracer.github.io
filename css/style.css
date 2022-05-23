@@ -117,18 +117,20 @@
 .sidebar-list {
     position: relative;
     list-style: none;
+    margin: auto;
     margin-top: 60px;
     padding: 0;
+}
+
+.sidebar-list li {
+    line-height: 45px;
 }
 
 .sidebar-list a {
     font-size: large;
     color: #eee;
     text-decoration: none;
-}
-
-.sidebar-list li {
-    padding: 10px 30px;
+    padding: 10px 110px 10px 30px;
 }
 
 /*全局*/
@@ -140,7 +142,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: opacity(0.5) blur(2px);
+    filter: opacity(0.3) blur(2px);
 }
 
 .show-container {
@@ -160,25 +162,36 @@
 }
 
 /*首页*/
-.logo-box {
+.shower-box {
     max-width: 40%;
     display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5rem;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.3);*/
+    border-radius: 2rem;
     padding: 2rem 0;
 }
 
+.logo-box {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.logo-box a {
+    max-width: 20%;
+}
+
 .logo-box img {
-    width: 20%;
+    width: 100%;
 }
 
-.dsp-logo{
-    margin-right: 4rem;
+.dsp-logo {
+    margin: 0 4rem;
 }
 
-.cidt-logo{
-    margin-left: 4rem;
+.cidt-logo {
+    margin: 0 4rem;
 }
 
 .logo-box span {
@@ -187,20 +200,35 @@
     background-color: #eee;
 }
 
-.letter-box{
+.en-letter {
+    width: 80%;
+}
+
+.letter-box {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 2rem 0;
 }
 
-.letter-box span{
-    font-size: xx-large;
-    margin: 0.5rem 0;
+.letter-box span {
+    margin: 0.2rem 0;
+    font-weight: 300;
 }
 
-.en-letter{
-    width: 40%;
+.name-zh {
+    font-size: 2.8em;
+    letter-spacing: 3px;
+}
+
+.name-en {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.letter-important {
+    color: #f3a602;
+    font-size: 1.6em;
 }
 
 /*banner*/
@@ -222,7 +250,7 @@
 }
 
 .arrow svg {
-    fill: #666666;
+    fill: #eeeeee99;
     cursor: pointer;
     padding: 0;
 }
@@ -463,21 +491,21 @@
     }
 }
 
-@media all and (max-width: 1920px){
-    .logo-box {
-        border-radius: 3rem;
+@media all and (max-width: 1920px) {
+    .shower-box {
+        border-radius: 1.5rem;
     }
-    
-    .dsp-logo{
-        margin-right: 3rem;
+
+    .dsp-logo {
+        margin: 0 3rem;
     }
-    
-    .cidt-logo{
-        margin-left: 3rem;
+
+    .cidt-logo {
+        margin: 0 3rem;
     }
 }
 
-@media all and (max-width:1100px) {
+@media all and (max-width: 1100px) {
     #left-arrow {
         margin-left: 0;
     }
@@ -487,7 +515,7 @@
     }
 }
 
-@media all and (max-width:980px) {
+@media all and (max-width: 980px) {
     #navbar-gate {
         display: block;
     }
@@ -500,18 +528,30 @@
     .lab-select {
         display: none;
     }
+
+    .lab-li {
+        margin-bottom: auto;
+    }
+
+    #menu li.active a {
+        color: rgb(0, 0, 0);
+        background-color: #f3a602;
+        border-left: 5px #eee solid;
+        padding-left: 50px;
+        padding-right: 85px;
+    }
 }
 
-@media all and (max-width:960px) {
+@media all and (max-width: 960px) {
     .arrow {
         width: 3rem;
     }
 }
 
-@media all and (max-width:960px),
-(max-height:900px) {
-    .letter-box span{
-        font-size: larger;
+@media all and (max-width: 960px),
+(max-height: 900px) {
+    .media-img {
+        border-radius: 3rem 0.5rem 3rem 0.5rem;
     }
 
     .media-main-pic {
@@ -574,7 +614,7 @@
     }
 }
 
-@media all and (max-width:850px) {
+@media all and (max-width: 850px) {
     .floatbox {
         margin: 0 1%;
     }
@@ -582,30 +622,47 @@
 
 @media all and (max-width: 768px),
 (max-height: 650px) {
-    .logo-box {
-        border-radius: 2rem;
+    .name-zh {
+        font-size: 2.2em;
+    }
+
+    .name-en {
+        font-size: 1.2em;
+    }
+
+    .letter-important {
+        font-size: 1.4em;
+    }
+
+    .shower-box {
+        max-width: 60%;
+        border-radius: 1rem;
         padding: 1rem 0;
     }
 
-    .logo-box span{
-        width: 3px;
-    }
-    
-    .dsp-logo{
-        margin-right: 2rem;
-    }
-    
-    .cidt-logo{
-        margin-left: 2rem;
+    .logo-box {
+        padding-bottom: 1rem 0;
     }
 
-    .letter-box span{
-        font-size: large;
+    .logo-box span {
+        width: 3px;
+    }
+
+    .dsp-logo {
+        margin: 0 2rem;
+    }
+
+    .cidt-logo {
+        margin: 0 2rem;
     }
 
     .icon {
         width: 80px;
         height: 80px;
+    }
+
+    .media-img {
+        border-radius: 2rem 0.5rem 2rem 0.5rem;
     }
 
     .media-main-pic {
@@ -666,7 +723,7 @@
     }
 }
 
-@media all and (max-width:650px) {
+@media all and (max-width: 650px) {
     .media-nav-item::after {
         margin-left: 0.1rem;
         width: 0.2rem;
@@ -703,13 +760,41 @@
     }
 }
 
-@media all and (max-width:550px) {
-    .logo-box {
-        max-width: 60%;
+@media all and (max-width:550px),
+(max-height: 550px) {
+    .lab-top {
+        height: 40px;
     }
 
-    .en-letter{
-        width: 60%;
+    #navbar-gate {
+        height: 40px;
+        width: 40px;
+    }
+
+    .name-box {
+        margin-right: 0;
+    }
+
+    .lab-title {
+        font-size: 2rem;
+        letter-spacing: 8px;
+        line-height: 40px;
+    }
+
+    .name-zh {
+        font-size: 1.5em;
+    }
+
+    .name-en {
+        font-size: 0.8rem;
+    }
+
+    .letter-important {
+        font-size: 1em;
+    }
+
+    .shower-box {
+        max-width: 80%;
     }
 
     .avatar {
@@ -717,11 +802,7 @@
     }
 
     .lab-title {
-        line-height: 60px;
-    }
-
-    .letter-box span{
-        font-size: medium;
+        line-height: 40px;
     }
 
     #right-arrow {
@@ -755,7 +836,7 @@
 
     .media-main-pic {
         width: 96vw;
-        height: 54vw;
+        height: 50vw;
         margin: 0;
     }
 
@@ -781,27 +862,22 @@
     }
 }
 
-@media all and (max-width:340px) {
-    .lab-top {
-        height: 40px;
-        background-color: rgb(40, 40, 40);
-        box-shadow: 1px 1px 10px #333;
-        z-index: 30;
+@media all and (max-width:375px) {
+    .name-zh {
+        font-size: larger;
     }
 
-    #navbar-gate {
-        height: 40px;
-        width: 40px;
+    .name-en {
+        font-size: xx-small;
+        letter-spacing: 1px;
     }
 
-    .name-box {
-        margin-right: 0;
+    .letter-important {
+        font-size: small;
     }
 
-    .lab-title {
-        font-size: 2rem;
-        letter-spacing: 8px;
-        line-height: 40px;
+    .shower-box {
+        max-width: 90%;
     }
 
     .media-info-serial {
