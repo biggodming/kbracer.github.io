@@ -621,7 +621,7 @@
 }
 
 @media all and (max-width: 768px),
-(max-height: 650px) {
+(max-height: 700px) {
     .name-zh {
         font-size: 2.2em;
     }
@@ -723,6 +723,12 @@
     }
 }
 
+@media all and (max-height: 550px) {
+    .media-list-wrapper {
+        display: none;
+    }
+}
+
 @media all and (max-width: 650px) {
     .media-nav-item::after {
         margin-left: 0.1rem;
@@ -760,8 +766,7 @@
     }
 }
 
-@media all and (max-width:550px),
-(max-height: 550px) {
+@media all and (max-width:550px) {
     .lab-top {
         height: 40px;
     }
