@@ -161,6 +161,11 @@
     transform: translateZ(1px);
 }
 
+.show-container span {
+    margin: 0.2rem 0;
+    font-weight: 300;
+}
+
 /*首页*/
 .shower-box {
     max-width: 40%;
@@ -209,11 +214,6 @@
     flex-direction: column;
     text-align: center;
     margin: 2rem 0;
-}
-
-.letter-box span {
-    margin: 0.2rem 0;
-    font-weight: 300;
 }
 
 .name-zh {
@@ -453,6 +453,53 @@
     font-size: 1.5em;
     -webkit-font-smoothing: antialiased;
     transition: 0.5s;
+}
+
+/**/
+
+/*工具*/
+.tool-title-zh{
+    font-size: 4em;
+    letter-spacing: 5px;
+}
+
+.tool-box{
+    max-width: 80%;
+    min-width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.tool{
+    width: 15%;
+    min-width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tool a{
+    display: flex;
+    max-width: 80%;
+    padding: 0.5rem;
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.sub-title-zh{
+    font-size: xx-large;
+    letter-spacing: 2px;
+}
+
+.tool img{
+    width: 90%;
+    vertical-align: middle;
 }
 
 /*水印*/
