@@ -310,26 +310,23 @@ ul {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-    padding: 0 2%;
-	padding-bottom: 10px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9;
+    padding: 1% 5%;
+    padding-bottom: 60px;
     box-sizing: border-box;
 }
 
 .footer div{
 	margin: auto;
-	margin-top: 0.2rem;
+	margin-top: 0.5rem;
 	color: #5cb6f3;
 	text-shadow: 0px 0px 20px #000;
 	font-size: medium;
-	line-height: 1;
+	line-height: 1.5;
 }
 
 .footer span{
 	color: #5cb6f3;
+    font-size: 1.2em;
 }
 
 .footersvg{
@@ -356,7 +353,7 @@ ul {
 	}
 	
 	.footer div{
-		font-size: x-small;
+		font-size: small;
 	}
 
     .footersvg{
