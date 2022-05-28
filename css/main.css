@@ -309,24 +309,42 @@ ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	text-align: center;
-    padding: 1% 5%;
     padding-bottom: 60px;
     box-sizing: border-box;
 }
 
-.footer div{
-	margin: auto;
+.footer-box{
+    max-width: 96rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1% 5%;
+    margin: auto;
+}
+
+.footer-box div{
+    display: flex;
+    flex-direction: column;
 	margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
 	color: #5cb6f3;
 	text-shadow: 0px 0px 20px #000;
 	font-size: medium;
-	line-height: 1.5;
 }
 
-.footer span{
+.footer-box span{
 	color: #5cb6f3;
     font-size: 1.2em;
+    line-height: 2;
+}
+
+.favicon img{
+    width: 100px;
+}
+
+.support span{
+    display: flex;
+    flex-direction: column;
 }
 
 .footersvg{

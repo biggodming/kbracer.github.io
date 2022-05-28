@@ -502,6 +502,15 @@
     vertical-align: middle;
 }
 
+/*商城*/
+
+/*关于*/
+.about-box{
+    min-width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
 /*水印*/
 .fp-watermark {
     display: none;
