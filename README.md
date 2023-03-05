@@ -1,3 +1,5 @@
+#该项目已废弃，新项目请移步[CIDT-webpage ](https://github.com/web-CIDT/CIDT-webpage）0)
+---
 # cidt
 戴森球计划合集汇总
 
