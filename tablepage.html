@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,maximum-scale=2">
+	<meta name="description" content="戴森球计划整活合集">
+	<title>CIDT作品列表</title>
+	<link rel="icon" href="img/cidt.ico">
+	<link rel="shortcut icon" href="img/cidt.ico">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="css/table.css" rel="stylesheet">
+	<!--<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/js/template.js"></script>
+	<!--<script src="./js/index.js"></script>-->
+</head>
+
+<body class="cover">
+	<div class="main-div">
+		<div class="background"></div>
+		<div>
+			<header class="lab-top">
+				<div id="navbar-gate" title="菜单">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="name-box">
+					<a  href="#"><span class="web-font lab-title">CI<img src="/img/cidt.png"
+								class="avatar">DT</span></a>
+				</div>
+				<div class="lab-container">
+					<ul class="lab-select">
+						<li class="lab-li"><a  href="/">首页</a></li>
+						<li class="lab-li"><a  href="#">主页</a></li>
+						<li class="lab-li"><a  href="/tablepage">归档</a></li>
+						<li class="lab-li"><a  href="#">分类</a></li>
+						<li class="lab-li"><a  href="#">关于</a></li>
+					</ul>
+				</div>
+			</header>
+
+			<nav id="sidebar">
+				<ul class="sidebar-list">
+					<div><a  href="/">
+							<li>首页</li>
+						</a></div>
+					<div><a  href="#">
+							<li>主页</li>
+						</a></div>
+					<div><a  href="/tablepage">
+							<li>归档</li>
+						</a></div>
+					<div><a  href="#">
+							<li>分类</li>
+						</a></div>
+					<div><a  href="#">
+							<li>关于</li>
+						</a></div>
+				</ul>
+			</nav>
+
+			<div id="search-bar">
+				<div class="options">
+					<div class="search-box">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn-default" type="button">搜索作品</button>
+							</span>
+							<input type="text" class="form-control form-text-height search" placeholder="关键字">
+						</div>
+					</div>
+					<div class="search-box">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn-default" type="button">类　　型</button>
+							</span>
+							<select class="form-control form-height Type">
+								<option value="all">所有</option>
+								<option value="球雕">球雕</option>
+								<option value="蓝图">蓝图</option>
+								<option value="mod">mod</option>
+								<option value="机甲">机甲</option>
+								<option value="音乐">音乐</option>
+								<option value="其他">其他</option>
+							</select>
+						</div>
+					</div>
+					<div class="search-box">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn-default" type="button">教程/整活</button>
+							</span>
+							<select class="form-control form-height">
+								<option value="all">所有</option>
+								<option value="0">教程</option>
+								<option value="1">整活</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="table-responsive">
+				<div class="top-blank"></div>
+
+				<h2 class="title">戴森球计划整活合集</h2>
+				<table id="tb_results" class="table-area">
+					<thead>
+						<th class="tb-author">作者</th>
+						<th class="tb-type">整活类型</th>
+						<th class="tb-time">投稿时间</th>
+						<th class="tb-name">链接</th>
+					</thead>
+
+					<tbody>
+
+					</tbody>
+				</table>
+				<script src="js/list.js"></script>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div>
+				<span>
+					&copy; 2021-<script>
+						document.write((new Date).getFullYear());
+					</script> CIDT |</span>
+				<span id="living-time"></span>
+				<script src="js/living-time.js"></script>
+				<span>
+					<a href="https://github.com/CIDT/cidt" target="_blank"><img src="/svg/github-fill.svg"
+							class="footersvg"> 源码</a>
+				</span>
+			</div>
+			<div>
+				<span>
+					相关up：<a href="https://space.bilibili.com/2070472" target="_blank">
+						<img src="/svg/bilibili-fill.svg" class="footersvg">我就是曹某</a>
+					<a href="https://space.bilibili.com/933614" target="_blank"><img
+							src="/svg/bilibili-fill.svg" class="footersvg"> McKen</a>
+					<a href="https://space.bilibili.com/441955257" target="_blank"><img
+							src="/svg/bilibili-fill.svg" class="footersvg"> 我的小马叫丁真</a>
+					<a href="https://space.bilibili.com/12120424" target="_blank"><img
+							src="/svg/bilibili-fill.svg" class="footersvg"> 看客之眼</a>
+					<a href="https://space.bilibili.com/9564795" target="_blank"><img
+							src="/svg/bilibili-fill.svg" class="footersvg"> 阿七寇大先生</a>
+					<a href="https://space.bilibili.com/379039" target="_blank"><img
+							src="/svg/bilibili-fill.svg" class="footersvg"> Alpha初见</a>
+					<a href="https://space.bilibili.com/2023988132" target="_blank"><img
+							src="/svg/bilibili-fill.svg" class="footersvg"> bWFuanVzYWth</a>
+				</span></div>
+		</footer>
+</body>
+
+<!--<script src="js/searchbar.js"></script>-->
+<script src="js/sidebar.js"></script>
+<script type="text/template" id="tb">
+	{{each data as v }}
+<tr>
+    <td class="td-author">{{v.author}}</td>
+    <td>{{v.Type}}</td>
+    <td>{{v.Time}}</td>
+	<td>
+		<a href="https://www.bilibili.com/video/{{v.BVID}}" target="_blank">{{v.BVname}}</a>
+	</td>
+  </tr>
+  {{/each}}
+
+</script>
+
+</html>
